@@ -1,0 +1,195 @@
+/* GENERAL STYLES */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0d0d1a;
+  color: #e0e0ff;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.dark-section {
+  background-color: #12122b;
+}
+
+h1, h2, h3, h4 {
+  color: #b68cff;
+  margin-bottom: 1rem;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(13, 13, 26, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #a088ff;
+  text-transform: uppercase;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #c7caff;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #7f9eff;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.hero-content {
+  z-index: 10;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #7f00ff, #3f00ff);
+  padding: 0.75rem 2rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.4s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #a37bff, #3f5eff);
+  transform: scale(1.05);
+}
+
+/* ANIMATIONS */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-in-delay {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.fade-in-delay2 {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* SERVICE, FAQ, TESTIMONIALS */
+.services-grid,
+.faq-grid,
+.portfolio-grid,
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.service-box, .faq-item, .portfolio-item, blockquote {
+  background: #1b1b35;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(107, 89, 255, 0.15);
+}
+
+.profile-img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* CONTACT */
+.contact-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* FOOTER */
+footer {
+  background: #0d0d1a;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888aff;
+}
+
+/* PRELOADER */
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #0d0d1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #4b3bb3;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
